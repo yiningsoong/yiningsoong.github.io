@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title> Twilio Demo </title>
+    <link rel="shortcut icon" href="favicon.7b05e8ee.ico">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/materialize.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet" type="text/css">
+
+    <script src="js/require.js"></script>
+
+    <!-- Google Font: Roboto and Montserrat-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,700" rel="stylesheet">
+
+<body>
+    <div class="row">
+        <div class="col s3 z-depth-1" id="input">
+            <div>
+                <img id="logo" class="animated zoomIn" src="favicon.7b05e8ee.ico"/>
+                <h3 class="center-align animated bounce delay-1s">Welcome!</h3>
+                <p class="center-align mb-30">Fill in your name and channel name to begin communicating with others!</p>
+                <div class="input-field">
+                    <input id="username" type="text" name="username" class="validate">
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-field mb-30">
+                    <input id="roomName" name="roomName" type="text" class="validate">
+                    <label for="roomName">Channel Name</label>
+                </div>
+
+                <button id="joinBtn" onclick="join()"
+                    class="mb-10 btn waves-effect waves-orange btn-black">Join</button>
+                <button id="disconnectBtn" onclick="disconnect()"
+                    class="waves-effect waves-light btn disabled btn-black hide">Disconnect</button>
+
+            </div>
+        </div>
+
+        <div class="col s9" id="chat">
+            <div id="loader" class="preloader-wrapper big">
+                <div class="spinner-layer spinner-yellow-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat-details" class="row scale-transition scale-out">
+                <div class="col s8 relative" id="middle_column">
+                    <label id="camera_setting">
+                        <input onchange="toggleCamera(this)" type="checkbox" checked/>
+                        <span id="camera_value">Camera ON</span>
+                    </label>
+
+                    <h3 class="center-align" id="channel_name"></h3>
+
+                    <button id="pushBtn" class="btn-floating waves-effect waves-light red disabled pulse-slow"
+                        onmouseout="stopTalk()" onmousedown="pushTalk()" onmouseup="stopTalk()">
+                        <i class="material-icons">keyboard_voice</i>
+                    </button>
+
+                    <p class="helper-text center-align mb-30">Press and Hold until it's green to talk</p>
+
+                    <div class="row box-shadow-top" id="videos">
+                        <div class="col s8" id="participantTrack"></div>
+                        <div class="col s4" id="publisher"></div>
+                    </div>
+                </div>
+
+                <div class="onlinePanel z-depth-1 col s4 grey lighten-3">
+                    <span>Online <span id="user_count" class="new badge" data-badge-caption="user">4</span></span>
+                    <div id="onlineUsers"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+</html>

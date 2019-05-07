@@ -1,0 +1,278 @@
+body,
+html {
+    height: 100%;
+    min-width: 800px;
+    min-height: 550px;
+    font-family: 'Montserrat', sans-serif;
+    color: #232f34;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.container,
+.row,
+.col {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.box-shadow-top {
+    box-shadow: 0 -3px 1px -2px rgba(0,0,0,0.12);
+}
+
+#logo {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100px;
+}
+
+#videos {
+    position: relative;
+    /* width: 100%; */
+    flex: 1;
+    overflow: scroll;
+    min-height: 10px;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+
+#middle_column {
+    display: flex;
+    flex-direction: column;
+}
+
+#participantTrack > video {
+    display: inline-block;
+    margin: 10px;
+    width: 40%;
+}
+
+#publisher {
+    padding: 10px;
+}
+
+#publisher > video{
+    width: 100%;
+}
+
+#pushBtn {
+    width: 200px;
+    height: 200px;
+    margin: 30px auto;
+}
+
+#pushBtn > i {
+    font-size: 10rem;
+}
+
+.pulse-slow {
+    margin: 80px;
+    display: block;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(255, 0, 0, 0.4);
+}
+
+.pulse-slow-animation {
+    animation: pulse-slow 0.5s infinite;
+}
+
+@-webkit-keyframes pulse-slow {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4);
+    }
+
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
+}
+
+@keyframes pulse-slow {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4);
+    }
+
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+    }
+
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
+}
+
+.chip {
+    margin: 10px 5px 0 5px !important;
+}
+
+.chip>button {
+    line-height: 32px;
+    font-size: 20px;
+    float: left;
+    margin: 0 8px 0 -12px !important;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#input,
+#chat {
+    position: relative;
+}
+
+#input:after {
+    content: "";
+    /* image taken from: https://all-free-download.com/free-vector/download/abstract-orange-background-polygonal-style-ornament_6828160.html */
+    background-image: url(../img/orange-background.png);
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#input>div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+.relative {
+    position: relative;
+}
+
+#camera_setting {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+/* start of customised input */
+
+/* label color */
+.input-field label {
+    color: #4a6572;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus+label {
+    color: #4a6572;
+}
+
+/* label underline focus color */
+.input-field input[type=text] {
+    border-bottom: 1px solid #4a6572;
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #4a6572;
+    box-shadow: 0 1px 0 0 #4a6572;
+}
+
+/* valid color */
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #4a6572;
+    box-shadow: 0 1px 0 0 #4a6572;
+}
+
+/* invalid color */
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #4a6572;
+    box-shadow: 0 1px 0 0 #4a6572;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #4a6572;
+}
+
+/* end of customised input */
+
+.btn-black {
+    border: 3px solid #4a6572;
+    background: transparent;
+    border-radius: 50px;
+    width: 100%;
+    height: 50px;
+    color: #4a6572;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: none;
+}
+
+.btn-black.disabled {
+    border: 3px solid white;
+}
+
+.btn-black:hover {
+    box-shadow: none;
+    background: transparent;
+}
+
+.btn-black:active,
+.btn-black:focus {
+    background: transparent;
+}
+
+.preloader-wrapper.big {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+}
+
+.card-title {
+    width: fit-content;
+}
+
+span.badge {
+    margin-top: 5px;
+}
+
+.onlinePanel {
+    padding: 20px !important;
+    overflow-y: auto;
+}
+
+.scale-transition.scale-out {
+    -webkit-transition: -webkit-transform .5s !important;
+    transition: -webkit-transform .5s !important;
+    transition: transform .5s !important;
+    transition: transform .5s, -webkit-transform .5s !important;
+}
+
+[type="checkbox"]+span:not(.lever) {
+    padding-left: 25px;
+}

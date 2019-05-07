@@ -69,7 +69,7 @@
                     <h3 class="center-align" id="channel_name"></h3>
 
                     <button id="pushBtn" class="btn-floating waves-effect waves-light red disabled pulse-slow"
-                        touchend="stopTalk()" touchstart="pushTalk()">
+                        onmouseout="stopTalk()" onmousedown="pushTalk()" onmouseup="stopTalk()" ontouchend="stopTalk()" ontouchstart="pushTalk()">
                         <i class="material-icons">keyboard_voice</i>
                     </button>
 
